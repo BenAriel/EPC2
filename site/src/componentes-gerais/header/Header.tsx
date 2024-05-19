@@ -22,7 +22,7 @@ export const Header = () => {
             <img src={EPCLogo} alt="EPC Logo" className="h-12" />
             <nav className="flex-1 flex justify-end items-center space-x-10 ml-15 mr-20">
                 <Abas label="Home" onClick={handleClickHome} />
-                <Abas label="Sobre" onClick={handleClickEventos} />
+                <Abas label="Eventos" onClick={handleClickEventos} />
                 <Abas label="Participantes" onClick={handleClickParticipantes} />
             </nav>
         </header>
