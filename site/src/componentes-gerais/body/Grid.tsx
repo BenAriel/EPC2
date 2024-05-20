@@ -32,7 +32,7 @@ interface ColumnsGridProps {
 export const ColumnsGrid: React.FC<ColumnsGridProps> = ({ children, gridSizes }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container rowSpacing={12} spacing={8}>
+      <Grid container spacing={12} alignItems="stretch">
         {children.map((child, index) => (
           <Grid item key={index} xs={gridSizes[index]?.xs} sm={gridSizes[index]?.sm} md={gridSizes[index]?.md} lg={gridSizes[index]?.lg} xl={gridSizes[index]?.xl}>
             <Item>

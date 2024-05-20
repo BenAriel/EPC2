@@ -1,8 +1,8 @@
 {
+  "homepage": "https://benariel.github.io/EPC2/",
   "name": "site",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://benariel.github.io/EPC2/",
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
