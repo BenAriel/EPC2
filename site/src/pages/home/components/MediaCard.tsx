@@ -17,7 +17,7 @@ export const MediaCard: React.FC<MediaCardProps> = (props) => {
         <Card sx={{ maxWidth: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', minHeight: 600 }}>
             <CardMedia
                 component="img"
-                sx={{ height: 400, objectFit: 'contain' }} // Ajuste de altura e proporção
+                sx={{ height: 400, objectFit: 'contain' }} 
                 image={props.image}
                 title={props.title}
             />

@@ -3,55 +3,44 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { MediaCard } from '../../pages/home/components/CardSobreNos';
-import Eventos from '../../images/Eventos.jpeg'; // Caminho corrigido
-import Equipe from '../../images/equipe.jpeg'; // Caminho corrigido
-import { useNavigate } from 'react-router-dom';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
-  padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
   display: 'flex',
   flexDirection: 'column',
+  justifyContent: 'space-between',
   height: '100%',
+  width: '100%',
 }));
 
-export const ColumnsGrid = () => {
-    const navegar = useNavigate();
-    const handleEventos = () => {
-        navegar('/eventos');
-    };
-    const handleAlunos = () => {
-        navegar('/alunos');
-    };
+interface GridSize {
+  xs: number;
+  sm?: number;
+  md?: number;
+  lg?: number;
+  xl?: number;
+}
 
-    return (
-        <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
-                    <Item>
-                        <MediaCard 
-                            title="Eventos" 
-                            onClick={handleEventos} 
-                            description="Acompanhe os eventos do EPC e reveja todos os que já realizamos" 
-                            image={Eventos}
-                        />
-                    </Item>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                    <Item>
-                        <MediaCard 
-                            title="Participantes" 
-                            onClick={handleAlunos} 
-                            description="Conheça mais sobre cada participantes desse belo projeto!" 
-                            image={Equipe}
-                        />
-                    </Item>
-                </Grid>
-            </Grid>
-        </Box>
-    );
+interface ColumnsGridProps {
+  children: React.ReactNode[];
+  gridSizes: GridSize[];
+}
+
+export const ColumnsGrid: React.FC<ColumnsGridProps> = ({ children, gridSizes }) => {
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container rowSpacing={12} spacing={8}>
+        {children.map((child, index) => (
+          <Grid item key={index} xs={gridSizes[index]?.xs} sm={gridSizes[index]?.sm} md={gridSizes[index]?.md} lg={gridSizes[index]?.lg} xl={gridSizes[index]?.xl}>
+            <Item>
+              {child}
+            </Item>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
 };

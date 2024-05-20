@@ -1,10 +1,13 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
+import { SvgIconComponent } from '@mui/icons-material';
 
 interface BotaoProps {
-    variant: 'contained' | 'outlined' | 'text';
-    label: string;
-    onClick: () => void;
+  label?: string;
+  icon?: SvgIconComponent;
+  variant: 'text' | 'outlined' | 'contained';
+  onClick?: () => void;
+
 }
 
 export const Botao: React.FC<BotaoProps> = (props)=> {

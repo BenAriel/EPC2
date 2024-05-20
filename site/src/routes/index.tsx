@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes as Switch, Navigate } from "react-router-d
 import { Eventos, Participantes, Principal } from "../pages";
 export const Routes = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/EPC2">
             <Switch>
                 <Route path="/home" element={<Principal />} />
                 <Route path="/eventos" element={<Eventos/>} />
