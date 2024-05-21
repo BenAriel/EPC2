@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes as Switch, Navigate, HashRouter } from "react-router-dom";
+import { Route, Routes as Switch, Navigate, HashRouter } from "react-router-dom";
 import { Eventos, Participantes, Principal } from "../pages";
 export const Routes = () => {
     return (

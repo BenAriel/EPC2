@@ -9,33 +9,35 @@ import PatrickImage from '../../images/patrick.jpeg';
 import ClaraImage from '../../images/clara.jpg';
 import RafaelImage from '../../images/rafael.jpg';
 import JoaolImage from '../../images/joao.jpeg';
+import ArturlImage from '../../images/artur.jpeg';
 import ViniciuslImage from '../../images/vinicius.jpg';
 import LucasImage from '../../images/lucas.jpg';
 import { ColumnsGrid } from "../../componentes-gerais/body/Grid";
-import { Typography } from '@mui/material';
+import { Typography, Container } from '@mui/material';
 
 export const Participantes = () => {
   return (
     <div className="bg-gray-100 min-h-screen pt-16">
       <Header />
-      <div className="mt-40 mb-120 mx-16">
+      <div className="mt-40 mx-16">
         <Typography variant="h2" align="center" gutterBottom>
-          Conheça cada um de nós melhor!
+          Conheça melhor cada um de nós!
         </Typography>
       </div>
-      <div className="mr-16 ml-16 mt-16">
+      <Container className="mt-40 mb-80">
         <ColumnsGrid
           gridSizes={[
-            { xs: 12, sm: 6, md: 3 },
-            { xs: 12, sm: 6, md: 3 },
-            { xs: 12, sm: 6, md: 3 },
-            { xs: 12, sm: 6, md: 3 },
-            { xs: 12, sm: 6, md: 3 },
-            { xs: 12, sm: 6, md: 3 },
-            { xs: 12, sm: 6, md: 3 },
-            { xs: 12, sm: 6, md: 3 },
-            { xs: 12, sm: 6, md: 3 }
-          ]}
+            { xs: 12, sm: 6, md: 3, lg: 3, xl: 3},
+            { xs: 12, sm: 6, md: 3, lg: 3, xl: 3},
+            { xs: 12, sm: 6, md: 3, lg: 3, xl: 3},
+            { xs: 12, sm: 6, md: 3, lg: 3, xl: 3},
+            { xs: 12, sm: 6, md: 3, lg: 3, xl: 3},
+            { xs: 12, sm: 6, md: 3, lg: 3, xl: 3},
+            { xs: 12, sm: 6, md: 3, lg: 3, xl: 3},
+            { xs: 12, sm: 6, md: 3, lg: 3, xl: 3},
+            { xs: 12, sm: 6, md: 3, lg: 3, xl: 3},
+            { xs: 12, sm: 6, md: 3, lg: 3, xl: 3},
+          ]} space={12}
         >
           <CardAlunos
             image={DanieleImage}
@@ -100,11 +102,16 @@ export const Participantes = () => {
             curso="ciência da computação (3º período)"
             github="https://github.com/BenAriel"
           />
+          <CardAlunos
+            image={ArturlImage}
+            title="Artur Guedes"
+            cargo="Participante"
+            curso="ciência da computação (5º período)"
+            github="https://github.com/PepeuFBV"
+          />
         </ColumnsGrid>
-      </div>
-      <div className="mt-52">
-        <Footer />
-      </div>
+      </Container>
+      <Footer />
     </div>
   );
 };

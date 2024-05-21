@@ -22,13 +22,13 @@ export const Principal = () => {
             <div className="p-4 mt-20">
                 <InfoCard />
             </div>
-            <div className="mr-16 ml-16 mt-36">
+            <div className="mr-16 ml-16 mt-60">
                 <ColumnsGrid
                  gridSizes={[
-                    { xs: 12, md: 6 },
-                    { xs: 12, md: 6 },
+                    { xs: 12, sm: 12,md: 6, lg: 6, xl: 6},
+                    { xs: 12, sm: 12,md: 6, lg: 6, xl: 6},
     
-                  ]}
+                  ]} space={8}
                 >
                     <MediaCard 
                         title="Eventos" 
@@ -44,7 +44,7 @@ export const Principal = () => {
                     />
                 </ColumnsGrid>
             </div>
-            <div className="mt-52">
+            <div className="mt-80">
                 <Footer />
             </div>
         </div>

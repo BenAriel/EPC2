@@ -27,12 +27,13 @@ interface GridSize {
 interface ColumnsGridProps {
   children: React.ReactNode[];
   gridSizes: GridSize[];
+  space: number;
 }
 
-export const ColumnsGrid: React.FC<ColumnsGridProps> = ({ children, gridSizes }) => {
+export const ColumnsGrid: React.FC<ColumnsGridProps> = ({ children, gridSizes,space }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={12} alignItems="stretch">
+      <Grid container spacing={space} alignItems="stretch">
         {children.map((child, index) => (
           <Grid item key={index} xs={gridSizes[index]?.xs} sm={gridSizes[index]?.sm} md={gridSizes[index]?.md} lg={gridSizes[index]?.lg} xl={gridSizes[index]?.xl}>
             <Item>
