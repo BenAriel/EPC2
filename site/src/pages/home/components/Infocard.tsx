@@ -1,19 +1,66 @@
-import EPCLogo from "../../../images/EPC-logo.jpeg";
+import React from 'react';
+import { Typography } from "@mui/material";
+import { Botao } from "../../../componentes-gerais/body/Botao";
 
-export const InfoCard = () => {
+interface InfoCardProps {
+    image: React.ComponentType<React.SVGProps<SVGSVGElement>> | string;
+    title: string;
+    description1: string;
+    description2?: string;
+    description3?: string;
+    data?: string;
+    terBotao?: boolean;
+    titleBotao?: string;
+    onClick?: () => void | null;
+}
+
+export const InfoCard: React.FC<InfoCardProps> = (props) => {
+    let diferencaDias = 0;
+    let mensagemData = '';
+    if(props.data && props.data !== "") {
+        const dataAtual = new Date();
+        const dataEspecifica = new Date(props.data);
+        const diferenca = dataEspecifica.getTime() - dataAtual.getTime();
+        diferencaDias = Math.ceil(diferenca / (1000 * 3600 * 24));
+        mensagemData = diferencaDias > 0 ? `${diferencaDias} dias até o evento` : `O evento já aconteceu`;
+    }
+
+    const ImageComponent = props.image as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
     return (
         <div className="bg-white rounded-lg shadow-lg p-8 w-11/12 h-auto mx-auto mt-8">
-            <img src={EPCLogo} alt="EPC Logo" className="h-32 w-32 mx-auto mb-4" />
-            <h2 className="text-4xl font-bold text-center mb-4">Escola Piloto de Computação</h2>
+            {typeof props.image === 'string' ? <img src={props.image} alt={props.title} className="h-32 w-32 mx-auto mb-4" /> : <ImageComponent className="h-32 w-32 mx-auto mb-4" />}
+            <h2 className="text-4xl font-bold text-center mb-4">{props.title}</h2>
+            {props.data && (
+                <div>
+                    <Typography variant="h6" align="center" gutterBottom sx={{ color: diferencaDias > 0 ? 'green' : 'red' }}>
+                        Data: {props.data} ({mensagemData})
+                    </Typography>
+                </div>
+            )}
             <p className="text-center text-gray-700 text-lg">
-                A Escola Piloto de Computação (EPC) é uma iniciativa da Universidade Federal Rural do Semi-Árido (UFERSA) dedicada a fornecer educação de alta qualidade em ciências da computação. Nossa missão é preparar os alunos para enfrentar os desafios do mundo tecnológico em constante evolução, oferecendo um currículo robusto e atualizado, ministrado por professores experientes e qualificados.
+                {props.description1}
             </p>
-            <p className="text-center text-gray-700 text-lg mt-4">
-                A EPC foi lançada em 2019 com o objetivo de criar um ambiente de aprendizagem inovador, onde os alunos pudessem desenvolver habilidades práticas e teóricas em computação. No entanto, devido à pandemia de COVID-19, as atividades foram suspensas em 2020 para garantir a segurança de todos os envolvidos. Felizmente, o projeto foi retomado em 2023, renovado e com ainda mais entusiasmo e compromisso em proporcionar uma educação transformadora.
-            </p>
-            <p className="text-center text-gray-700 text-lg mt-4">
-                Atualmente, a Escola Piloto de Computação da UFERSA oferece uma variedade de cursos e atividades, incluindo programação, desenvolvimento de software, inteligência artificial, e muito mais. Nossos alunos têm a oportunidade de participar de projetos práticos, estágios e pesquisas que os preparam para o mercado de trabalho e para futuras pesquisas acadêmicas.
-            </p>
+            {props.description2 && (
+                <p className="text-center text-gray-700 text-lg mt-4">
+                    {props.description2}
+                </p>
+            )}
+            {props.description3 && (
+                <p className="text-center text-gray-700 text-lg mt-4">
+                    {props.description3}
+                </p>
+            )}
+            {props.terBotao && (
+                 <p className="text-center text-lg mt-4">
+                <Botao
+                    label={props.titleBotao || "Botão"}
+                    variant="contained"
+                    onClick={props.onClick || (() => {})}
+                    disabled={diferencaDias < 0}
+                />
+                </p>
+            )}
         </div>
     );
 };

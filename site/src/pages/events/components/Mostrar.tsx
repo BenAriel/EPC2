@@ -3,10 +3,9 @@ import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 import Fade from '@mui/material/Fade';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import { ReactElement } from 'react';
 
 interface MostrarProps {
-    children: ReactElement<any, any>;
+    children: React.ReactElement<any, any>;
     label: string;
 }
 
@@ -18,14 +17,18 @@ export const Mostrar: React.FC<MostrarProps> = ({ children, label }) => {
     };
 
     return (
-        <Box sx={{ height: 180 }}>
-            <FormControlLabel
+        <Box>
+            <FormControlLabel className="justify-center"
                 control={<Switch checked={checked} onChange={handleChange} />}
                 label={label}
             />
-            <Box sx={{ display: 'flex' }}>
-                <Fade in={checked}>{children}</Fade>
-            </Box>
+            {checked && (
+                <Fade in={checked}>
+                    <Box sx={{ display: 'flex', mt: 2 }}>
+                        {children}
+                    </Box>
+                </Fade>
+            )}
         </Box>
     );
 }

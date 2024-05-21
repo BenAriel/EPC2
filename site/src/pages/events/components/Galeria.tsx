@@ -20,20 +20,23 @@ export const Galeria: React.FC<GaleriaProps> = ({ imagens }) => {
         <ImageList
           cols={3}
           gap={20}
+          className="flex flex-wrap justify-center"
         >
           {imagens.map((image) => (
-            <ImageListItem key={image.imagem}>
+            <ImageListItem key={image.imagem} className="relative">
               <img
-                srcSet={`${image.imagem}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                src={`${image.imagem}?w=248&fit=crop&auto=format`}
+                srcSet={`${image.imagem}?w=248&h=248&fit=crop&auto=format&dpr=2 2x`}
+                src={`${image.imagem}?w=248&h=248&fit=crop&auto=format`}
                 alt={image.titulo}
                 loading="lazy"
-                className="w-4/5 max-h-60 object-cover"
+                className="object-cover w-full h-full"
+                style={{ aspectRatio: '1 / 1' }}
               />
               <ImageListItemBar
                 title={image.titulo}
                 subtitle={<span>{image.descricao}</span>}
                 position="below"
+                className="absolute bottom-0 left-0 w-full bg-gray-800 bg-opacity-75 text-white p-2"
               />
             </ImageListItem>
           ))}

@@ -6,6 +6,7 @@ import { MediaCard } from "../../pages/home/components/MediaCard";
 import Eventos from '../../images/Eventos.jpeg'; 
 import Equipe from '../../images/equipe.jpeg'; 
 import { useNavigate } from "react-router-dom";
+import EPCLogo from "../../images/EPC-logo.jpeg";
 
 export const Principal = () => {
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ export const Principal = () => {
         <div className="bg-gray-100 min-h-screen pt-16">
             <Header />
             <div className="p-4 mt-20">
-                <InfoCard />
+                <InfoCard title="Escola piloto de Computação" image={EPCLogo} description1="é uma iniciativa da Universidade Federal Rural do Semi-Árido (UFERSA) dedicada a fornecer educação de alta qualidade em ciências da computação. Nossa missão é preparar os alunos para enfrentar os desafios do mundo tecnológico em constante evolução, oferecendo um currículo robusto e atualizado, ministrado por professores experientes e qualificados." description2="A EPC foi lançada em 2019 com o objetivo de criar um ambiente de aprendizagem inovador, onde os alunos pudessem desenvolver habilidades práticas e teóricas em computação. No entanto, devido à pandemia de COVID-19, as atividades foram suspensas em 2020 para garantir a segurança de todos os envolvidos. Felizmente, o projeto foi retomado em 2023, renovado e com ainda mais entusiasmo e compromisso em proporcionar uma educação transformadora." description3="Atualmente, a Escola Piloto de Computação da UFERSA oferece uma variedade de cursos e atividades, incluindo programação, desenvolvimento de software, inteligência artificial, e muito mais. Nossos alunos têm a oportunidade de participar de projetos práticos, estágios e pesquisas que os preparam para o mercado de trabalho e para futuras pesquisas acadêmicas." />
             </div>
             <div className="mr-16 ml-16 mt-60">
                 <ColumnsGrid

@@ -1,11 +1,12 @@
-import trueLogo from "../../images/trueLogo.svg";
 import { FaInstagram } from "react-icons/fa";
+import TrueLogo from "../../images/trueLogo.svg";
+
 
 export const Footer = () => {
     return (
         <footer className="bg-blue-900 text-white p-8 flex justify-around items-start">
             <div className="flex flex-col items-center">
-                <img src={trueLogo} alt="EPC Logo" className="h-24 mb-4" />
+            <img src={TrueLogo} alt="EPC Logo" className="h-24 mb-4" />
             </div>
             <div className="h-24 border-l border-gray-50 mx-4"></div>
 
