@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/EPC2/static/css/main.eeadd09a.css",
-    "main.js": "/EPC2/static/js/main.1210790b.js",
-    "static/js/453.5779cf73.chunk.js": "/EPC2/static/js/453.5779cf73.chunk.js",
+    "main.css": "/EPC2/static/css/main.3fff2427.css",
+    "main.js": "/EPC2/static/js/main.a17ca349.js",
+    "static/js/510.6583eb5a.chunk.js": "/EPC2/static/js/510.6583eb5a.chunk.js",
     "static/media/wtcc7.jpeg": "/EPC2/static/media/wtcc7.87cbba7c17b1c8177178.jpeg",
     "static/media/wtcc4.jpg": "/EPC2/static/media/wtcc4.2c0ca09eca07fbc81a2f.jpg",
     "static/media/wtcc6.jpeg": "/EPC2/static/media/wtcc6.1c2912e31dc13d8b0323.jpeg",
@@ -13,9 +13,8 @@
     "static/media/wtcc8.jpeg": "/EPC2/static/media/wtcc8.359c79eecea83b4fea2f.jpeg",
     "static/media/artur.jpeg": "/EPC2/static/media/artur.fb805e75b044afc7f702.jpeg",
     "static/media/clara.jpg": "/EPC2/static/media/clara.aa8a9611af616d4abfd1.jpg",
-    "static/media/wtcc-resesrva.png": "/EPC2/static/media/wtcc-resesrva.35da918607cb0567f8dd.png",
-    "static/media/trueLogo.svg": "/EPC2/static/media/trueLogo.f0deff7c8820378ac6f55f0f2fcafa1e.svg",
     "static/media/EPC-logo.jpeg": "/EPC2/static/media/EPC-logo.4bd42c0470d3b40ecbf7.jpeg",
+    "static/media/capcom-logo.png": "/EPC2/static/media/capcom-logo.77efb8831f0ff34f2275.png",
     "static/media/vinicius.jpg": "/EPC2/static/media/vinicius.b7c0075a7e9545a6c62c.jpg",
     "static/media/wtcc2.jpg": "/EPC2/static/media/wtcc2.2d6c9bd872a0b1c62ac2.jpg",
     "static/media/Capcom1.jpg": "/EPC2/static/media/Capcom1.cd6a57acf8956d282520.jpg",
@@ -34,12 +33,12 @@
     "static/media/pedro.jpeg": "/EPC2/static/media/pedro.49ec727310da933ec53e.jpeg",
     "static/media/joas.jpg": "/EPC2/static/media/joas.01600aab085b8945aca9.jpg",
     "index.html": "/EPC2/index.html",
-    "main.eeadd09a.css.map": "/EPC2/static/css/main.eeadd09a.css.map",
-    "main.1210790b.js.map": "/EPC2/static/js/main.1210790b.js.map",
-    "453.5779cf73.chunk.js.map": "/EPC2/static/js/453.5779cf73.chunk.js.map"
+    "main.3fff2427.css.map": "/EPC2/static/css/main.3fff2427.css.map",
+    "main.a17ca349.js.map": "/EPC2/static/js/main.a17ca349.js.map",
+    "510.6583eb5a.chunk.js.map": "/EPC2/static/js/510.6583eb5a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eeadd09a.css",
-    "static/js/main.1210790b.js"
+    "static/css/main.3fff2427.css",
+    "static/js/main.a17ca349.js"
   ]
 }
