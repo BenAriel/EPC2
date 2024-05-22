@@ -133,7 +133,7 @@ export const Eventos = () => {
           description2="Durante o evento, os participantes terão acesso a uma programação diversificada, incluindo cerimônia de abertura, palestras, mesas-redondas, minicursos, hackathon e maratona de programação. Além disso, ao participar dos minicursos, os alunos poderão obter CERTIFICADOS, enriquecendo seus currículos e ampliando suas habilidades na área. Não perca essa oportunidade de aprendizado e networking! 🚀🔍🎓"
           image={WtccLogo}
           terBotao={true}
-          titleBotao="iscrever-se"
+          titleBotao="inscreva-se"
           onClick={handleWTCCClick}
         />
       </div>
@@ -145,7 +145,7 @@ export const Eventos = () => {
           description2="Participar da CAPCOM é uma excelente oportunidade para ampliar suas habilidades e conhecimentos em computação. Além de enriquecer seu currículo, você terá a chance de aprender com especialistas, explorar novas tecnologias e tendências do mercado, e fazer networking com colegas e profissionais da área. É um momento valioso para desenvolvimento pessoal e profissional, que pode abrir portas para futuras oportunidades e colaborações."
           image={CapcomLogo} 
           terBotao={true}
-          titleBotao="iscrever-se"
+          titleBotao="inscreva-se"
           onClick={handleWTCCClick}
         />
       </div>

@@ -36,7 +36,7 @@ export const Galeria: React.FC<GaleriaProps> = ({ imagens }) => {
                 title={image.titulo}
                 subtitle={<span>{image.descricao}</span>}
                 position="below"
-                className="absolute bottom-0 left-0 w-full bg-gray-800 bg-opacity-75 text-white p-2"
+                className="absolute bottom-0 left-0 w-full bg-gray-800 bg-opacity-75 text-zinc-900 p-2"
               />
             </ImageListItem>
           ))}
